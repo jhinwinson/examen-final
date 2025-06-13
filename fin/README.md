@@ -43,3 +43,50 @@ Dario Chacon – Validaciones de entrada y control de errores con try/catch
 
 Juan David – Documentación y pruebas del sistema
 
+Diagrama de Clases UML para BatallaElemental Arena
+
++--------------------+
+                |    Personaje       |  
+                +--------------------+
+                | - nombre: String   |
+                | - vida: int        |
+                | - poder: int       |
+                +--------------------+
+                | +Personaje(nombre: String, poder: int) |
+                | +getNombre(): String      |
+                | +getVida(): int           |
+                | +getPoder(): int          |
+                | +recibirDanio(danio: int): void |
+                | +curar(): void            |
+                | +atacar(enemigo: Personaje): void |
+                +--------------------+
+                         /|\ 
+                          |
+      -----------------------------------------------
+      |         |            |              |       |
++-------------+ +-------------+ +-------------+ +--------------+
+| TipoFuego   | | TipoAgua    | | TipoRayo    | | TipoViento   |
++-------------+ +-------------+ +-------------+ +--------------+
+| +TipoFuego(nombre: String)  |
+| +TipoAgua(nombre: String)   |
+| +TipoRayo(nombre: String)   |
+| +TipoViento(nombre: String) |
++-----------------------------+
+
+                +---------------------+
+                |      Batalla        |
+                +---------------------+
+                | - leer: Scanner     |
+                +---------------------+
+                | +iniciarBatalla(j1: Personaje, j2: Personaje): void |
+                | +realizarTurno(atacante: Personaje, defensor: Personaje): void |
+                +---------------------+
+
+                +-----------------------------+
+                |      BatallaElemental       |
+                +-----------------------------+
+                | +main(args: String[]): void |
+                | +elegirPersonaje(nombre: String): Personaje |
+                | +mostrarOpciones(equipo: Personaje[]): void |
+                +-----------------------------+
+
