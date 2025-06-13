@@ -45,7 +45,7 @@ Juan David – Documentación y pruebas del sistema
 
 Diagrama de Clases UML para BatallaElemental Arena
 
-+--------------------+
+----------------------------------------------------------------------------------------
                 |    Personaje       |  
                 +--------------------+
                 | - nombre: String   |
@@ -90,3 +90,32 @@ Diagrama de Clases UML para BatallaElemental Arena
                 | +mostrarOpciones(equipo: Personaje[]): void |
                 +-----------------------------+
 
+----------------------------------------------------------------------------------------------------
+
+1. Recolección de Requisitos
+
+El proyecto busca desarrollar un videojuego educativo tipo RPG por turnos, enfocado en el aprendizaje de programación orientada a objetos. Los requisitos funcionales incluyen selección de personajes elementales (fuego, agua, rayo, viento), combate por turnos, y una interfaz por consola; mientras que los no funcionales priorizan la modularidad del código, usabilidad y posibilidad de escalarlo a versiones futuras.
+
+2. Análisis del Sistema
+
+Se identifican las principales entidades del sistema: los personajes como clases con atributos comunes y especializaciones por tipo, la clase Batalla que gestiona la lógica del juego y la clase principal que orquesta el flujo. Las relaciones de herencia y colaboración entre clases aseguran una estructura clara y extensible, permitiendo un control eficiente de los turnos y las acciones de los jugadores.
+
+3. Diseño del Sistema
+
+El diseño se basa en principios de programación orientada a objetos, aplicando herencia para los tipos de personajes y encapsulamiento para proteger atributos como vida y poder. Se diseña un diagrama UML que representa visualmente las clases y relaciones, y se estructura la lógica del combate en una clase separada para mantener el código limpio y escalable.
+
+4. Implementación
+
+La solución se implementa en Java utilizando Scanner para la entrada del usuario y estructuras condicionales para controlar las acciones de ataque o curación. Las clases están organizadas de forma modular: Personaje como clase base, subclases para los tipos, Batalla para la mecánica de juego, y una clase main para manejar la experiencia del jugador desde el inicio hasta el final del combate.
+
+5. Pruebas
+
+Se realizan pruebas funcionales para validar la correcta ejecución de ataques, curaciones y turnos, así como pruebas de validación para entradas no numéricas o fuera de rango. También se evalúan condiciones límite como que la vida no baje de 0 ni suba de 100, garantizando la integridad del flujo de juego y la estabilidad general del sistema.
+
+6. Despliegue
+
+El juego se ejecuta inicialmente en consola  Esta versión es la vercion basica
+
+7. Mantenimiento
+
+Se contempla la corrección de errores reportados por usuarios y la expansión del juego con nuevos tipos de personajes, habilidades, inteligencia artificial para jugar contra la máquina, y mejoras visuales. El mantenimiento también incluiría compatibilidad multiplataforma, documentación y modularidad para que otros puedan extender el proyecto fácilmente
